@@ -12,7 +12,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* * {
@@ -37,9 +38,17 @@ body {
   overflow: hidden;
   position: relative;
   
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
+  
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 h1 { font-size: 4rem; }
@@ -69,6 +78,7 @@ button { all: unset; cursor: pointer }
 }
 
 .btn-play-again {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--white)), to(var(--off-white)));
   background-image: linear-gradient(var(--white), var(--off-white));
   color: var(--dark-text);
   font-size: 20px;
@@ -78,24 +88,35 @@ button { all: unset; cursor: pointer }
 
 /* Token Styling */
 .token {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .rock {
+  background-color: hsl(349, 71%, 52%);
   background-image: linear-gradient(135deg,hsl(349, 70%, 56%), hsl(349, 71%, 52%));
 }
 .paper {
+  background-color: hsl(230, 89%, 62%);
   background-image: linear-gradient(135deg,hsl(230, 89%, 65%), hsl(230, 89%, 62%));
 }
 .scissors {
+  background-color: hsl(39, 89%, 49%);
   background-image: linear-gradient(135deg,hsl(40, 84%, 53%), hsl(39, 89%, 49%));
 }
 .lizard {
+  background-color: hsl(261, 73%, 60%);
   background-image: linear-gradient(135deg,hsl(261, 72%, 63%),hsl(261, 73%, 60%));
 }
 .spock {
+  background-color: hsl(189, 59%, 53%);
   background-image: linear-gradient(135deg,hsl(189, 58%, 57%), hsl(189, 59%, 53%));
 }
 
@@ -105,10 +126,19 @@ button { all: unset; cursor: pointer }
   height: 100vh;
 
   padding: 2rem 2rem 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 2;
 }
 
@@ -120,9 +150,17 @@ button { all: unset; cursor: pointer }
   border: 3px solid var(--header-outline);
   border-radius: 10px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header-list {
@@ -130,10 +168,21 @@ button { all: unset; cursor: pointer }
 }
 
 .header-score-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--white)), to(var(--off-white)));
 
   background-image: linear-gradient(var(--white), var(--off-white));
   padding: 12px 28px;
@@ -152,9 +201,15 @@ button { all: unset; cursor: pointer }
 
 /* Home */
 .home-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   width: 100%;
 }
@@ -178,7 +233,8 @@ button { all: unset; cursor: pointer }
   width: 45%;
   /* padding-top: 45%; */
   padding: 5%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -216,9 +272,15 @@ button { all: unset; cursor: pointer }
   padding-top: 100%;
   border-radius: 50%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .svg-container {
@@ -227,11 +289,20 @@ button { all: unset; cursor: pointer }
   left: 50%;
   width: 80%;
   height: 80%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
   
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /* background-color: red; */
 }
 
@@ -244,9 +315,15 @@ button { all: unset; cursor: pointer }
 /* Game */
 .game-wrapper {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .game {
@@ -265,10 +342,19 @@ button { all: unset; cursor: pointer }
 
 .game-info {
   grid-area: info;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   /* padding-bottom: 1rem; */
 }
 
@@ -282,10 +368,19 @@ button { all: unset; cursor: pointer }
 
 .player-pick,
 .house-pick {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column-reverse;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .player-pick p,
 .house-pick p{
@@ -306,9 +401,15 @@ button { all: unset; cursor: pointer }
   position: relative;
   border-radius: 50%;
   background-color: var(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .game-token {
@@ -323,7 +424,10 @@ button { all: unset; cursor: pointer }
 }
 
 .won {
-  box-shadow: 0 0 0 20px rgb(255, 255, 255, 0.03),
+  -webkit-box-shadow: 0 0 0 20px rgb(255, 255, 255, 0.03),
+              0 0 0 40px rgb(255, 255, 255, 0.03),
+              0 0 0 60px rgb(255, 255, 255, 0.03);
+          box-shadow: 0 0 0 20px rgb(255, 255, 255, 0.03),
               0 0 0 40px rgb(255, 255, 255, 0.03),
               0 0 0 60px rgb(255, 255, 255, 0.03);
 }
@@ -392,16 +496,28 @@ button { all: unset; cursor: pointer }
     font-size: 18px;
   }
   .game-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .player-pick,
   .house-pick {
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
   }
   .won {
-    box-shadow: 0 0 0 40px rgb(255, 255, 255, 0.03),
+    -webkit-box-shadow: 0 0 0 40px rgb(255, 255, 255, 0.03),
+                0 0 0 80px rgb(255, 255, 255, 0.03),
+                0 0 0 120px rgb(255, 255, 255, 0.03);
+            box-shadow: 0 0 0 40px rgb(255, 255, 255, 0.03),
                 0 0 0 80px rgb(255, 255, 255, 0.03),
                 0 0 0 120px rgb(255, 255, 255, 0.03);
   }
